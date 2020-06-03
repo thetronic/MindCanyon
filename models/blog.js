@@ -6,7 +6,7 @@ const blogSchema = new mongoose.Schema({
   title: { type: String, required: true },
   summary: { type: String, required: true },
   image: { type: String, required: true },
-  body: { type: String, required: true },
+  text: { type: String, required: true },
   user: { type: mongoose.Schema.ObjectId, ref: 'User', required: false },
 }, {
   timestamps: true 
