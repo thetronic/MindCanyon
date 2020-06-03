@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const app = express()
 const logger = require('./lib/logger')
 const { port, dbURI } = require('./config/environmental')
+const router = require('./config/router')
 
 mongoose.connect(
   dbURI, 
@@ -14,12 +15,19 @@ mongoose.connect(
   })
 
   
+app.use(express.static(`${__dirname}/dist`)) 
 
-
+app.get('/', (req, res) => {
+   res.json({ message: 'HEY GIRL' })
+  })
 
 app.use(bodyParser.json())
 app.use(logger) 
+app.use('/api', router)
+
+app.get('/*', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 
 
-mongoose.connect(dbURI)
+
+
 app.listen(port, () => console.log(`Up and running on port ${port}`))
