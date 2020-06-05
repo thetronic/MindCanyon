@@ -34,7 +34,7 @@ function update(req, res, next) {
         return res.status(404).json({ message: 'Not Found' })
       } else {
         Object.assign(blog, req.body)
-        trail.save()
+        blog.save()
           .then(updatedBlog => res.status(202).json(updatedBlog))
       }
     })

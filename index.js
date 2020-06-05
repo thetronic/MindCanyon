@@ -15,19 +15,24 @@ mongoose.connect(
   })
 
   
-app.use(express.static(`${__dirname}/dist`)) 
 
-app.get('/', (req, res) => {
-   res.json({ message: 'HEY GIRL' })
+  app.use((req, res, next) => {
+    console.log(`Ìncoming ${req.method} to ${req.url}`)
+    next()
   })
 
 app.use(bodyParser.json())
 app.use(logger) 
 app.use('/api', router)
 
+app.use(express.static(`${__dirname}/dist`))
+app.use(express.static(`${__dirname}/public`))
 app.get('/*', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 
 
 
 
 app.listen(port, () => console.log(`Up and running on port ${port}`))
+
+module.exports = app
+
