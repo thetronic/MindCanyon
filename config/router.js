@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const blogs = require('../controllers/blogs')
-const users = require('../controllers/auth')
+// const users = require('../controllers/auth')
 
 const secureRoute = require('../lib/secureRoute')
 
@@ -14,7 +14,7 @@ router.route('/blogs/:id')
   .put(secureRoute, blogs.update)
   .delete(secureRoute, blogs.destroy)
 
-router.route('/login')
-  .post(users.login)
+// router.route('/login')
+//   .post(users.login)
 
 module.exports = router

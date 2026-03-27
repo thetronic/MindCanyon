@@ -1,0 +1,14 @@
+{
+  "name": "MindCanyon",
+  "packageManager": "yarn@4.13.0",
+  "scripts": {
+    "start": "node index.js",
+    "build": "webpack",
+    "dev": "webpack serve"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.3.3"
+  }
+}
