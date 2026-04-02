@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "MindCanyon",
   "packageManager": "yarn@4.13.0",
   "scripts": {
@@ -12,6 +13,8 @@
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.3.3"
 =======
+=======
+>>>>>>> parent of 2277f18 (steve additions)
   "name": "react-starterpack",
   "version": "1.0.0",
   "main": "index.js",
@@ -52,6 +55,9 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
+<<<<<<< HEAD
+>>>>>>> parent of 2277f18 (steve additions)
+=======
 >>>>>>> parent of 2277f18 (steve additions)
   }
 }
